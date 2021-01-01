@@ -50,9 +50,8 @@ body {
   text-shadow: 0 0 18px #a8a8a8;
 }
 
-.foxy {
-  height: 100px;
-  width: 100px;
+.job:hover {
+  text-shadow: 0 0 18px var(--glow-color);
 }
 
 .link {
@@ -67,6 +66,7 @@ body {
 
 .link:hover {
   color: var(--navigation-hover-color);
+  text-shadow: 0 0 18px var(--glow-color);
   /* background-color: var(--glow-color); */
   /* box-shadow: 0px 0px 50px 5px var(--glow-color);   */
 }
@@ -77,8 +77,8 @@ canvas {
   left:0;
   top:0;
   z-index:-2;
-  width: 900px; 
-  height: 1400px;
+  width:100%;
+  height:1450px;
 }
 
 .nebula {
@@ -86,8 +86,8 @@ canvas {
   left:0;
   top:0;
   z-index:-1;
-  width: 767px; 
-  height: 1400px;
+  width: 100%; 
+  height: 1450px;
   opacity: 0.33;
 } 
 
@@ -148,7 +148,9 @@ canvas {
  
 .intro-text {
     margin: 10px 10px 10px 10px;
-    text-align:center 
+    /* width: 300px; */
+    padding: 10px;
+    text-align:center;
   }
 
 .nav ul {
@@ -203,6 +205,13 @@ canvas {
     gap: 15px 15px;
   }
   
+  .card-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
   .header {
     display: flex;
     flex-direction: row;
@@ -232,7 +241,7 @@ canvas {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
       "header"
@@ -274,8 +283,8 @@ canvas {
     left:0;
     top:0;
     z-index:-2;
-    width: 1068px; 
-    height: 1300px;
+    width: 100%; 
+    height: 1840px;
   }
   
   .nebula {
@@ -283,8 +292,8 @@ canvas {
     left:0;
     top:0;
     z-index:-1;
-    width: 1068px; 
-    height: 1300px;
+    width: 1023px; 
+    height: 1840px;
     opacity: 0.33;
   } 
 
@@ -294,6 +303,21 @@ canvas {
     height: 125px;
     font-size: 2rem;
   }
+
+  .intro-text {
+    margin: 10px 10px 10px 10px;
+    width: 500px;
+    padding: 10px;
+    text-align:center;
+     
+  }
+  .card-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+  }
+
 }
 
 @media (min-width: 1024px) {
@@ -303,8 +327,8 @@ canvas {
     left:0;
     top:0;
     z-index:-2;
-    width: 2560px; 
-    height: 1300px;
+    width: 100%; 
+    height: 1450px;
   }
   
   .nebula {
@@ -312,12 +336,10 @@ canvas {
     left:0;
     top:0;
     z-index:-1;
-    width: 2560px; 
-    height: 1300px;
+    width: 100%; 
+    height: 1450px;
     opacity: 0.33;
   } 
 
-  .name-title {    
-    opacity: 0.75;
-  }
+
 }
